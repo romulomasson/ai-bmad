@@ -21,10 +21,9 @@ public sealed class ItemsRepository
 
     public List<Item> GetAll()
     {
-        lock (_gate)
-        {
+        lock (_gate)        
             return _items.Values.ToList();
-        }
+        
     }
 
     public Item? GetById(int id)
